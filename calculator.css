@@ -1,68 +1,84 @@
-
-    
+* {
+  box-sizing: border-box;
+}
 
 #maincontainer {
-    display: block;
-    margin: auto;
-    background-color:antiquewhite;
-    border: 1px solid black;
-    border-radius: 8px;
-    height: 60%;
-    width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(107, 72, 110);
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 55%;
+  width: 24%;
 }
 
 .resultcontent {
-    padding: 5%;
-    height: 15%;
-    border-bottom: 1px solid black;
-
+  display: inline-grid;
+  grid-template-columns: 210px 60px;
+  grid-column-gap: 10px;
+  justify-content: center;
+  height: 20%;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid black;
 }
+
+#inputbox {
+  background-color: peachpuff;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  padding: 10px;
+}
+
+#clearbutton {
+  font-size: 16px;
+  font-style: oblique;
+  cursor: pointer;
+  background-color: rgb(204, 243, 243);
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+
+#clearbutton:active {
+  background-color: rgb(12, 12, 56);
+  color: white;
+}
+
+/* button section */
 
 .button_container {
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  justify-items: center;
+  padding: 10px;
 }
 
-.button1 {
-    padding: 16px;
-    border: 1px solid gray;
-    border-radius: 8px;
-    height: 20%;
-    width: 20%;
-    text-align: center;
-    font-size: 16px;
+.button {
+  height: 60px;
+  width: 60px;
+  background-color: whitesmoke;
+  text-align: center;
+  border: 1px none;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
 }
 
-.button_enter {
-    float: left;
-    margin-left: 10px;
-    border: 1px solid gray;
-    border-radius: 8px;
-    height: 10%;
-    width: 40%;
-    text-align: center;
-    font-size: 13px;
+.button:hover {
+  background-color: lightblue;
+  color: white;
+  transition-duration: 0.4s;
+  transform: translateY(4px);
 }
 
-.button_clear {
-    float: right;
-    margin-right: 10px;
-    border: 1px solid gray;
-    border-radius: 8px;
-    height: 10%;
-    width: 40%;
-    text-align: center;
-    font-size: 13px;
-}
-
-.button_equal {
-    float: center;
-    margin-right: 10px;
-    border: 1px solid gray;
-    border-radius: 8px;
-    height: 10%;
-    width: 10%;
-    text-align: center;
-    font-size: 13px;
+.button:active {
+  background-color: rgb(12, 12, 56);
+  color: white;
 }

@@ -1,13 +1,14 @@
-function dummyListener() {
-  document.getElementById("inputBox").value = "Hello world";
+function onClickNum(value) {
+  console.log(value);
 }
 
-document.getElementById("button1").addEventListener("click", dummyListener);
+function addClickEvent(button) {
+  const value = button.value;
+  button.addEventListener('click', function() {
+    onClickNum(value);
+  });
+}
 
-const myObject = {
-  name: "bestObject",
-  price: 50,
-  getPrice: function() {
-    console.log("Hello");
-  }
-};
+const buttons = document.getElementsByClassName('num-value'); // We get HTML collection of buttons (objects)
+const buttonsArray = Array.from(buttons);
+buttonsArray.forEach(addClickEvent);
